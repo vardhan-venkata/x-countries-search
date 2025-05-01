@@ -25,7 +25,9 @@ function ListCountries({ searchValue }) {
       let fil =
         filteredData &&
         filteredData.length > 0 &&
-        filteredData.filter((ele) => ele.common.includes(searchValue));
+        filteredData.filter((ele) =>
+          ele.common?.toLowerCase().includes(searchValue)
+        );
       console.log(fil);
       setFilteredData(fil);
     } else {
